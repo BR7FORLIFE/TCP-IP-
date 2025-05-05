@@ -1,0 +1,28 @@
+CLIENTE                                              SERVIDOR
+─────────────────────────────────────────────────────────────────────────────
+Texto (Usuario escribe)                      
+▼                                                      
+String prompt = entrada.nextLine();                    
+                                                                      
+| (PrintWriter: convierte texto a bytes)
+▼                                                    
+OutputStream sendInformation = client.getOutputStream();
+PrintWriter response = new PrintWriter(sendInformation, true);
+response.println(prompt);    ─────────────▶    Socket recibe bytes (TCP/IP)
+
+                                                        ▼
+                                   InputStream decodeRequest = clientSocket.getInputStream();
+
+                                                        ▼
+               (InputStreamReader: convierte bytes a texto)
+                                InputStreamReader encodedRequest = new InputStreamReader(decodeRequest);
+
+                                                        ▼
+         (BufferedReader: lectura eficiente línea por línea)
+                        BufferedReader readRequest = new BufferedReader(encodedRequest);
+
+                                                        ▼
+                        String line = readRequest.readLine();
+                          (El servidor imprime el texto recibido)
+
+─────────────────────────────────────────────────────────────────────────────
