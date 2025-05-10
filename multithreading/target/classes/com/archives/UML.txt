@@ -1,0 +1,10 @@
+[Servidor principal]
+     |
+     |---> .accept() <-- espera un cliente
+            |
+            |--> Cliente conectado
+                  |
+                  |--> [Nuevo hilo creado]
+                          |
+                          |--> Ejecuta lógica de cliente
+                          |--> Termina --> hilo muere
