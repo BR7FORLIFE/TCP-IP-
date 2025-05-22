@@ -1,0 +1,88 @@
+.
+├── customprotocoltcp
+│  ├── pom.xml
+│  ├── src
+│  │  ├── main
+│  │  │  ├── java
+│  │  │  │  └── com
+│  │  │  │     └── files
+│  │  │  │        ├── Client.java
+│  │  │  │        ├── Main.java
+│  │  │  │        ├── request.http
+│  │  │  │        └── Server.java
+│  │  │  └── resources
+│  │  └── test
+│  │     └── java
+│  └── target
+│     ├── classes
+│     │  └── com
+│     │     └── files
+│     │        ├── Client.class
+│     │        ├── Main.class
+│     │        └── Server.class
+│     └── test-classes
+├── multithreading
+│  ├── 50
+│  ├── pom.xml
+│  ├── src
+│  │  ├── main
+│  │  │  ├── java
+│  │  │  │  └── com
+│  │  │  │     └── archives
+│  │  │  │        ├── Client.java
+│  │  │  │        ├── Main.java
+│  │  │  │        ├── practice
+│  │  │  │        │  ├── ClientExample.java
+│  │  │  │        │  ├── MainExample.java
+│  │  │  │        │  └── ServerExample.java
+│  │  │  │        ├── Server.java
+│  │  │  │        └── UML.txt
+│  │  │  └── resources
+│  │  └── test
+│  │     └── java
+│  └── target
+│     ├── classes
+│     │  └── com
+│     │     └── archives
+│     │        ├── Client.class
+│     │        ├── Main.class
+│     │        ├── practice
+│     │        │  ├── ClientExample.class
+│     │        │  ├── MainExample.class
+│     │        │  └── ServerExample.class
+│     │        ├── Server.class
+│     │        └── UML.txt
+│     ├── generated-sources
+│     │  └── annotations
+│     ├── maven-status
+│     │  └── maven-compiler-plugin
+│     │     └── compile
+│     │        └── default-compile
+│     │           ├── createdFiles.lst
+│     │           └── inputFiles.lst
+│     └── test-classes
+├── README.md
+├── serversockets
+│  ├── pom.xml
+│  ├── src
+│  │  ├── main
+│  │  │  ├── java
+│  │  │  │  └── com
+│  │  │  │     └── archives
+│  │  │  │        ├── Client.java
+│  │  │  │        ├── Main.java
+│  │  │  │        ├── request.http
+│  │  │  │        └── Server.java
+│  │  │  └── resources
+│  │  └── test
+│  │     └── java
+│  └── target
+│     ├── classes
+│     │  └── com
+│     │     └── archives
+│     │        ├── Client.class
+│     │        ├── Main.class
+│     │        ├── request.http
+│     │        └── Server.class
+│     └── test-classes
+└── structure.txt
