@@ -1,0 +1,36 @@
+src/
+├── domain/
+│   ├── model/
+│   ├── repository/
+│   └── service/
+├── application/
+│   └── usecases/
+├── infrastructure/
+│   ├── controllers/
+│   └── persistence/
+│       └── impl/
+└── config/
+
+
+src/
+├── domain/
+│   ├── model/
+│   │   └── User.java
+│   ├── repository/
+│   │   └── UserRepository.java
+│   └── service/
+│       └── UserService.java
+├── application/
+│   └── usecases/
+│       └── CreateUserUseCase.java
+├── infrastructure/
+│   ├── controllers/
+│   │   └── UserController.java
+│   ├── persistence/
+│   │   ├── impl/
+│   │   │   └── JpaUserRepository.java
+│   │   └── entity/
+│   │       └── UserEntity.java
+├── config/
+│   └── BeanConfiguration.java
+└── Main.java
