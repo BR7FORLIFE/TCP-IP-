@@ -31,3 +31,27 @@ build/
 
 ### VS Code ###
 .vscode/
+
+##env ##
+
+# Archivos de variables de entorno
+.env
+.env.*
+!.env.example
+
+# Archivos locales específicos
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Archivos de configuración sensible
+/config/*.secret.*
+/config/*.private.*
+
+# Backup de archivos env
+*.env.bak
+
+## aplication properties
+application.properties
+
