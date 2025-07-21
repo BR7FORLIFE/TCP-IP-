@@ -1,0 +1,25 @@
+1-  Security Filter Chain -> filtra las peticones HTTP, es aca donde se decide que endpoint necesitan o no seguridad
+2- AuthenticationManager -> se activa cuando alguien intenta autenticarse (login) recibe un Autentication (usuario/pass) y decide si son validos
+3- AuthenticationProvider -> se conecta con tu db o sistema de usuarios , usa tu UserDetailsServices para cargar un usuario por su username / email
+4- SecurityContext ->  Es el lugar donde Spring guarda quien esta autenticado (se puede acceder a él)
+5- Authorization -> Una vez autenticado , ahora se decide que puede o no puede hacer (@preAuthorize(), hasRole, SecurityFilterChain)
+
+✖️❌ si la request no cumple con los requerimientos de cada flujo llega hasta donde pudo y no sigue mas
+
+[Request] -> Tomcat(recibe la request)
+  ↓
+SecurityFilterChain  🛡 (filtro general) ()
+  ↓
+DispacherServlet(reparte las peticiones a los controladores)
+  ↓
+JwtFilter / LoginFilter  🔑 (autenticación)
+  ↓
+AuthenticationManager
+  ↓
+AuthenticationProvider → UserDetailsService → DB
+  ↓
+SecurityContextHolder  📦 (guarda user actual)
+  ↓
+Authorization  🚦 (¿puede o no puede hacer esto?)
+  ↓
+Controller
