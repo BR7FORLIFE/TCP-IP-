@@ -1,3 +1,13 @@
 spring:
   application:
     name: 01-basic-crud
+  datasource:
+    url: jdbc:postgresql://localhost:<port>/<name>
+    username: <user>
+    password: <password>
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
