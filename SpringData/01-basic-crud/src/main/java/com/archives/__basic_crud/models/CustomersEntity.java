@@ -1,7 +1,11 @@
 package com.archives.__basic_crud.models;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -29,6 +33,12 @@ public class CustomersEntity {
     @Column(length = 10, nullable = false)
     private String password;
 
+    @CreatedDate
+    private Date create_at;
+
+    @LastModifiedDate
+    private Date lastModified;
+    
     @ManyToMany(mappedBy = "customers")
     List<OrdersEntity> orders = new ArrayList<>();
 }
